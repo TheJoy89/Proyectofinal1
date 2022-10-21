@@ -4,6 +4,19 @@ public class Persona {
     private String name;
     private String fechaNacimiento;
 
+<<<<<<< Updated upstream
+=======
+    public Persona(String id, String name, String fecha) {
+    }
+
+    public Persona User(String Id, String Name, String fecha){
+         this.id = Id;
+         this.name = Name;
+         this.fechaNacimiento = fecha;
+         return null;
+     }
+
+>>>>>>> Stashed changes
     public String getId() {
         return id;
     }
