@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Profesor extends User {
+public class Profesor extends Persona {
 
 
     private String employeeId;

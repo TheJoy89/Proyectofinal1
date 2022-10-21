@@ -1,4 +1,4 @@
- class Estudiante extends User {
+ class Estudiante extends Persona {
 
     private String studentId;
     private String carrera;

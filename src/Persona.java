@@ -1,11 +1,11 @@
-public class User {
+public abstract class Persona {
 
 
     private String id;
     private String name;
     private String fechaNacimiento;
 
-     public User User(String Id, String Name, String fecha){
+     public Persona User(String Id, String Name, String fecha){
          this.id = Id;
          this.name = Name;
          this.fechaNacimiento = fecha;
