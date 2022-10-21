@@ -1,16 +1,8 @@
-public abstract class Persona {
-
+public class Persona {
 
     private String id;
     private String name;
     private String fechaNacimiento;
-
-     public Persona User(String Id, String Name, String fecha){
-         this.id = Id;
-         this.name = Name;
-         this.fechaNacimiento = fecha;
-         return null;
-     }
 
     public String getId() {
         return id;
@@ -29,10 +21,16 @@ public abstract class Persona {
     }
 
     public String getFechaNacimiento() {
-        return this.fechaNacimiento;
+        return fechaNacimiento;
     }
 
     public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Persona(String id, String name, String fechaNacimiento) {
+        this.id = id;
+        this.name = name;
         this.fechaNacimiento = fechaNacimiento;
     }
 }
