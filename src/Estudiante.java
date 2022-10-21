@@ -1,18 +1,15 @@
-public class Estudiante extends User {
+ class Estudiante extends User {
 
-     private String studentId;
+    private String studentId;
     private String carrera;
-   private Boolean curso = true;
+    private String curso;
 
 
-  public Estudiante new Carrera = (String StudenId, String carrera, boolean curso) {
-      this.studentId = StudenId;
-      this.curso = curso;
-        this.carrera = carrera;
+     Estudiante(java.lang.String Id, java.lang.String Name, java.lang.String fecha) {
+         super(Id, Name, fecha);
+     }
 
-    }
-
-    public java.lang.String getStudentId() {
+     public java.lang.String getStudentId() {
         return studentId;
     }
 
@@ -28,13 +25,12 @@ public class Estudiante extends User {
         this.carrera = carrera;
     }
 
-    public Boolean getCurso() {
-        if(this.curso == true){
-            System.out.println(" Curso Virtual");
-        } if ()
-    }
 
-    public void setCurso(Boolean curso) {
+     public String getCurso() {
+         return curso;
+     }
+
+     public void setCurso(String curso) {
         this.curso = curso;
     }
 

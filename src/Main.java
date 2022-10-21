@@ -5,8 +5,11 @@ public class Main {
 
 
 
-        public static Estudiante = new User("operro", "perro", "odcd" );
-        this.Estudiante = User;
+
+
+
+
+
 
 
     }

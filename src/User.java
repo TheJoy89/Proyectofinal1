@@ -5,11 +5,12 @@ public class User {
     private String name;
     private String fechaNacimiento;
 
-     public User = new User(String Id, String Name, String fecha){
+     public User User(String Id, String Name, String fecha){
          this.id = Id;
          this.name = Name;
          this.fechaNacimiento = fecha;
-    }
+         return null;
+     }
 
     public String getId() {
         return id;
