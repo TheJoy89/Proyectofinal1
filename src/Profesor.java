@@ -1,10 +1,10 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Profesor extends Persona {
 
 
     private String idEmpleado;
-    private ArrayList<Carrera> carreras = new ArrayList<>();
 
     public String getIdEmpleado() {
         return idEmpleado;
@@ -14,17 +14,8 @@ public class Profesor extends Persona {
         this.idEmpleado = idEmpleado;
     }
 
-    public ArrayList<Carrera> getCarreras() {
-        return carreras;
-    }
-
-    public void setCarreras(ArrayList<Carrera> carreras) {
-        this.carreras = carreras;
-    }
-
-    public Profesor(String identificacion, String nombre, String fechaNacimiento, String idEmpleado, ArrayList<Carrera> carreras) {
+    public Profesor(String identificacion, String nombre, Date fechaNacimiento, String idEmpleado) {
         super(identificacion, nombre, fechaNacimiento);
         this.idEmpleado = idEmpleado;
-        this.carreras = carreras;
     }
 }

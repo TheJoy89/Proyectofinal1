@@ -1,4 +1,7 @@
-public class Carrera {
+import java.util.ArrayList;
+import java.util.function.IntFunction;
+
+public class Carrera extends ArrayList<Carrera> {
 
     String nombre;
     Profesor director;
@@ -22,5 +25,14 @@ public class Carrera {
     public Carrera(String nombre, Profesor director) {
         this.nombre = nombre;
         this.director = director;
+    }
+
+    public void crearCarrera(){
+        System.out.println("Usted ha elegido crear carrera");
+    }
+
+    @Override
+    public <T> T[] toArray(IntFunction<T[]> generator) {
+        return super.toArray(generator);
     }
 }

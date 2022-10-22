@@ -1,4 +1,5 @@
 import java.security.PublicKey;
+import java.util.Scanner;
 
 public class Curso {
 
@@ -44,6 +45,55 @@ public class Curso {
         this.carrera = carrera;
         this.creditos = creditos;
         this.profesor = profesor;
+    }
+
+    public  static int menuCurso(){
+        int selection;
+        Scanner input = new Scanner(System.in);
+
+        /***************************************************/
+
+        System.out.println("Elija una de las siguientes opciones");
+        System.out.println("-------------------------\n");
+        System.out.println("1 - Crear Curso");
+        System.out.println("2 - Modificar Curso");
+        System.out.println("3 - Eliminar Curso");
+        System.out.println("4 - Visualizar Curso");
+        selection = input.nextInt();
+        return selection;
+    }
+
+    public  static void subMenuModificacionesPorCategoria(Integer selection){
+        switch (selection) {
+            case 1:
+                crearCurso();
+                break;
+            case 2:
+                moldificarCurso();
+                break;
+            case 3:
+                eliminarCurso();
+                break;
+            case 4:
+                visualizarCurso();
+                break;
+            default:
+                break;
+            // The user input an unexpected choice.
+        }
+    }
+
+    private static void crearCurso(){
+        System.out.println("Usted ha elegido crear Curso");
+    }
+    private static void moldificarCurso(){
+        System.out.println("Usted ha elegido modificar Curso");
+    }
+    private static void eliminarCurso(){
+        System.out.println("Usted ha elegido eliminar Curso");
+    }
+    private static void visualizarCurso(){
+        System.out.println("Usted ha elegido visualizar Curso");
     }
 }
 

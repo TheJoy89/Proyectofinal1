@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 class Estudiante extends Persona {
 
     private String carnet;
-    private ArrayList<Carrera> carreras = new ArrayList<>();
-    private ArrayList<Curso> cursos = new ArrayList<>();
+    private Carrera carreras;
+    private Curso cursos;
 
     public String getCarnet() {
         return carnet;
@@ -18,19 +19,19 @@ class Estudiante extends Persona {
         return carreras;
     }
 
-    public void setCarreras(ArrayList<Carrera> carreras) {
+    public void setCarreras(Carrera carreras) {
         this.carreras = carreras;
     }
 
-    public ArrayList<Curso> getCursos() {
+    public Curso getCursos() {
         return cursos;
     }
 
-    public void setCursos(ArrayList<Curso> cursos) {
+    public void setCursos(Curso cursos) {
         this.cursos = cursos;
     }
 
-    public Estudiante(String identificacion, String nombre, String fechaNacimiento, String carnet, ArrayList<Carrera> carreras, ArrayList<Curso> cursos) {
+    public Estudiante(String identificacion, String nombre, Date fechaNacimiento, String carnet, Carrera carreras, Curso cursos) {
         super(identificacion, nombre, fechaNacimiento);
         this.carnet = carnet;
         this.carreras = carreras;

@@ -1,8 +1,10 @@
+import java.util.Date;
+
 public abstract class Persona {
 
     private String identificacion;
     private String nombre;
-    private String fechaNacimiento;
+    private Date fechaNacimiento;
 
     public String getIdentificacion() {
         return identificacion;
@@ -20,15 +22,15 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-    public String getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Persona(String identificacion, String nombre, String fechaNacimiento) {
+    public Persona(String identificacion, String nombre, Date fechaNacimiento) {
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
