@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.function.IntFunction;
 
 public class Carrera extends ArrayList<Carrera> {
@@ -27,12 +28,52 @@ public class Carrera extends ArrayList<Carrera> {
         this.director = director;
     }
 
-    public void crearCarrera(){
-        System.out.println("Usted ha elegido crear carrera");
+    public  static int menuCarrera(){
+        int selection;
+        Scanner input = new Scanner(System.in);
+
+        /***************************************************/
+
+        System.out.println("Elija una de las siguientes opciones");
+        System.out.println("-------------------------\n");
+        System.out.println("1 - Crear Carrera");
+        System.out.println("2 - Modificar Carrera");
+        System.out.println("3 - Eliminar Carrera");
+        System.out.println("4 - Visualizar Carrera");
+        selection = input.nextInt();
+        return selection;
     }
 
-    @Override
-    public <T> T[] toArray(IntFunction<T[]> generator) {
-        return super.toArray(generator);
+    public  static void subMenuModificacionesPorCategoria(Integer selection){
+        switch (selection) {
+            case 1:
+                crearCarrera();
+                break;
+            case 2:
+                moldificarCarrera();
+                break;
+            case 3:
+                eliminarCarrera();
+                break;
+            case 4:
+                visualizarCarrera();
+                break;
+            default:
+                break;
+            // The user input an unexpected choice.
+        }
+    }
+
+    private static void crearCarrera(){
+        System.out.println("Usted ha elegido crear Carrera");
+    }
+    private static void moldificarCarrera(){
+        System.out.println("Usted ha elegido modificar Carrera");
+    }
+    private static void eliminarCarrera(){
+        System.out.println("Usted ha elegido eliminar Carrera");
+    }
+    private static void visualizarCarrera(){
+        System.out.println("Usted ha elegido visualizar Carrera");
     }
 }

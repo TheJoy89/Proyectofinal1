@@ -30,16 +30,16 @@ public class Main {
         switch (selection) {
             case 1:
                 Curso.subMenuModificacionesPorCategoria(Curso.menuCurso());
-//            case 2:
-//                return "Carrera";
+            case 2:
+                Carrera.subMenuModificacionesPorCategoria(Carrera.menuCarrera());
 //            case 3:
 //                return "Profesor";
-//            case 4:
-//                return "Estudiante";
-//            case 5:
-//                System.out.println("Adios!");
-                break;
+            case 4:
+                Estudiante.subMenuModificacionesPorCategoria(Estudiante.menuEstudiante());
+            case 5:
+                System.out.println("Adios!");
             default:
+                break;
         }
 //        return null;
     }
