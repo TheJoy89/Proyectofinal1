@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Profesor extends Persona {
 
@@ -18,4 +19,54 @@ public class Profesor extends Persona {
         super(identificacion, nombre, fechaNacimiento);
         this.idEmpleado = idEmpleado;
     }
+
+    public  static int menuCurso(){
+        int selection;
+        Scanner input = new Scanner(System.in);
+
+        /***************************************************/
+
+        System.out.println("Elija una de las siguientes opciones");
+        System.out.println("-------------------------\n");
+        System.out.println("1 - Crear Profesor");
+        System.out.println("2 - Modificar Profesor");
+        System.out.println("3 - Eliminar Profesor");
+        System.out.println("4 - Visualizar Profesor");
+        selection = input.nextInt();
+        return selection;
+    }
+
+    public  static void subMenuModificacionesPorCategoria(Integer selection){
+        switch (selection) {
+            case 1:
+                crearProfesor();
+                break;
+            case 2:
+                moldificarProfesor();
+                break;
+            case 3:
+                eliminarProfesor();
+                break;
+            case 4:
+                visualizarProfesor();
+                break;
+            default:
+                break;
+            // The user input an unexpected choice.
+        }
+    }
+
+    private static void crearProfesor(){
+        System.out.println("Usted ha elegido crear Curso");
+    }
+    private static void moldificarProfesor(){
+        System.out.println("Usted ha elegido modificar Curso");
+    }
+    private static void eliminarProfesor(){
+        System.out.println("Usted ha elegido eliminar Curso");
+    }
+    private static void visualizarProfesor(){
+        System.out.println("Usted ha elegido visualizar Curso");
+    }
+
 }

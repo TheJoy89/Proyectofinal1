@@ -37,4 +37,8 @@ class Estudiante extends Persona {
         this.carreras = carreras;
         this.cursos = cursos;
     }
+
+
+
+
 }
