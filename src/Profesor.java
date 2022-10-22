@@ -51,7 +51,6 @@ public class Profesor extends Persona {
                 break;
             default:
                 break;
-            // The user input an unexpected choice.
         }
     }
 

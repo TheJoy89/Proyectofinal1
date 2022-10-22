@@ -22,7 +22,7 @@ public class Main {
 
     public static void subMenuFromClasses(Integer selection){
         Date date = new Date();
-        Profesor profesor = new Profesor("PRFSR-0001", "Oscar Acuña", date,  "ID-00001");
+        Profesor profesor = new Profesor("PRFSR-0001", "Oscar Acuñq", date,  "ID-00001");
         Carrera carrera = new Carrera("Programacion", profesor);
         Curso curso = new Curso("Intrduccion a la programacion", carrera, 1, profesor);
         Estudiante estudiante = new Estudiante("EST-001", "Joyner Vicktor", date, "CRNT-0000", carrera, curso);
@@ -30,14 +30,19 @@ public class Main {
         switch (selection) {
             case 1:
                 Curso.subMenuModificacionesPorCategoria(Curso.menuCurso());
+                break;
             case 2:
                 Carrera.subMenuModificacionesPorCategoria(Carrera.menuCarrera());
+                break;
             case 3:
                 Profesor.subMenuModificacionesPorCategoria(Profesor.menuProfesor());
+                break;
             case 4:
                 Estudiante.subMenuModificacionesPorCategoria(Estudiante.menuEstudiante());
+                break;
             case 5:
                 System.out.println("Adios!");
+                break;
             default:
                 break;
         }
