@@ -1,4 +1,3 @@
-import java.beans.Customizer;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -23,17 +22,18 @@ public class Main {
 
     public static void subMenuFromClasses(Integer selection){
         Date date = new Date();
-        Profesor profesor = new Profesor("0001", "Nombre", date,  "00001");
-        Carrera carrera = new Carrera("nombreCarrera", profesor);
-        Curso curso = new Curso("NombreCurso", carrera, 1, profesor);
-        Estudiante estudiante = new Estudiante("EST-001", "Nombre de estudiante", date, "CRNT-0000", carrera, curso);
+        Profesor profesor = new Profesor("PRFSR-0001", "Oscar Acuña", date,  "ID-00001");
+        Carrera carrera = new Carrera("Programacion", profesor);
+        Curso curso = new Curso("Intrduccion a la programacion", carrera, 1, profesor);
+        Estudiante estudiante = new Estudiante("EST-001", "Joyner Vicktor", date, "CRNT-0000", carrera, curso);
+
         switch (selection) {
             case 1:
                 Curso.subMenuModificacionesPorCategoria(Curso.menuCurso());
             case 2:
                 Carrera.subMenuModificacionesPorCategoria(Carrera.menuCarrera());
-//            case 3:
-//                return "Profesor";
+            case 3:
+                Profesor.subMenuModificacionesPorCategoria(Profesor.menuProfesor());
             case 4:
                 Estudiante.subMenuModificacionesPorCategoria(Estudiante.menuEstudiante());
             case 5:

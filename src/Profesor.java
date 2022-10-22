@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -20,7 +19,7 @@ public class Profesor extends Persona {
         this.idEmpleado = idEmpleado;
     }
 
-    public  static int menuCurso(){
+    public  static int menuProfesor(){
         int selection;
         Scanner input = new Scanner(System.in);
 
@@ -57,16 +56,16 @@ public class Profesor extends Persona {
     }
 
     private static void crearProfesor(){
-        System.out.println("Usted ha elegido crear Curso");
+        System.out.println("Usted ha elegido crear Profesor");
     }
     private static void moldificarProfesor(){
-        System.out.println("Usted ha elegido modificar Curso");
+        System.out.println("Usted ha elegido modificar Profesor");
     }
     private static void eliminarProfesor(){
-        System.out.println("Usted ha elegido eliminar Curso");
+        System.out.println("Usted ha elegido eliminar Profesor");
     }
     private static void visualizarProfesor(){
-        System.out.println("Usted ha elegido visualizar Curso");
+        System.out.println("Usted ha elegido visualizar Profesor");
     }
 
 }
