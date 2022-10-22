@@ -17,6 +17,25 @@ public class Main {
         return selection;
     }
 
+
+    public  static String subMenuOpcionesEspecificas(Integer selection){
+        switch (selection) {
+            case 1:
+                return "Curso";
+            case 2:
+                return "Carrera";
+            case 3:
+                return "Profesor";
+            case 4:
+                return "Estudiante";
+            case 5:
+                System.out.println("Adios!");
+                break;
+            default:
+        }
+        return null;
+    }
+
     public  static int subMenuOpciones(String opcionPrincipalElegida){
         int selection;
         Scanner input = new Scanner(System.in);
@@ -34,31 +53,62 @@ public class Main {
         return selection;
     }
 
-    public  static void subMenu(Integer selection){
+    public  static int subMenuModificacionesPorCategoria(Integer selection, String accion){
         switch (selection) {
             case 1:
-                subMenuOpciones("Curso");
+                System.out.println("Usted ha elegido crear " + accion);
                 break;
             case 2:
-                subMenuOpciones("Carrera");
+                System.out.println("Usted ha elegido modificar " + accion);
                 break;
             case 3:
-                subMenuOpciones("Profesor");
+                System.out.println("Usted ha elegido eliminar " + accion);
                 break;
             case 4:
-                subMenuOpciones("Estudiante");
+                System.out.println("Usted ha elegido visualizar " + accion);
                 break;
             case 5:
                 System.out.println("Adios!");
                 break;
             default:
-                // The user input an unexpected choice.
+                break;
+            // The user input an unexpected choice.
         }
+        return 0;
     }
 
+//    public  static void MenuEspecificoDeAccionesSecundarias(Integer selection, String accion){
+//        switch (selection) {
+//            case 1:
+//                System.out.println("Usted ha elegido crear " + accion);
+//                break;
+//            case 2:
+//                System.out.println("Usted ha elegido modificar " + accion);
+//                break;
+//            case 3:
+//                System.out.println("Usted ha elegido eliminar " + accion);
+//                break;
+//            case 4:
+//                System.out.println("Usted ha elegido visualizar " + accion);
+//                break;
+//            case 5:
+//                System.out.println("Adios!");
+//                break;
+//            default:
+//                // The user input an unexpected choice.
+//        }
+//    }
 
-        public static void main(String[] args) {
-//        menuPrincipal();
-        subMenu(menuPrincipal());
+
+
+
+
+    public static void main(String[] args) {
+
+        Integer seleccionMenuPrincipal = menuPrincipal();
+        String seleccionMenuEspecifico =  subMenuOpcionesEspecificas(seleccionMenuPrincipal);
+        Integer seleccionDeSubMenuOpciones = subMenuOpciones(seleccionMenuEspecifico);
+
+        subMenuModificacionesPorCategoria(seleccionDeSubMenuOpciones, seleccionMenuEspecifico);
     }
 }

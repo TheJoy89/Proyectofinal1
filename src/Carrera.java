@@ -1,21 +1,26 @@
 public class Carrera {
 
     String nombre;
+    Profesor director;
 
-    public String getNombreCarrera() {
-        String nombreCarrera = null;
-        return nombreCarrera;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreCarrera(String nombreCarrera) {
-        this.nombreCarrera = nombreCarrera;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDirectorCarrera() {
-        return directorCarrera;
+    public Profesor getDirector() {
+        return director;
     }
 
-    public void setDirectorCarrera(String directorCarrera) {
-        this.directorCarrera = directorCarrera;
+    public void setDirector(Profesor director) {
+        this.director = director;
+    }
+
+    public Carrera(String nombre, Profesor director) {
+        this.nombre = nombre;
+        this.director = director;
     }
 }

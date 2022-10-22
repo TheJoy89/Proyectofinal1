@@ -1,36 +1,23 @@
-public class Persona {
+public abstract class Persona {
 
-    private String id;
-    private String name;
+    private String identificacion;
+    private String nombre;
     private String fechaNacimiento;
 
-<<<<<<< Updated upstream
-=======
-    public Persona(String id, String name, String fecha) {
+    public String getIdentificacion() {
+        return identificacion;
     }
 
-    public Persona User(String Id, String Name, String fecha){
-         this.id = Id;
-         this.name = Name;
-         this.fechaNacimiento = fecha;
-         return null;
-     }
-
->>>>>>> Stashed changes
-    public String getId() {
-        return id;
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getFechaNacimiento() {
@@ -41,9 +28,9 @@ public class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Persona(String id, String name, String fechaNacimiento) {
-        this.id = id;
-        this.name = name;
+    public Persona(String identificacion, String nombre, String fechaNacimiento) {
+        this.identificacion = identificacion;
+        this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
     }
 }

@@ -1,38 +1,39 @@
- class Estudiante extends Persona {
+import java.util.ArrayList;
 
-    private String studentId;
-    private String carrera;
-    private String curso;
+class Estudiante extends Persona {
 
+    private String carnet;
+    private ArrayList<Carrera> carreras = new ArrayList<>();
+    private ArrayList<Curso> cursos = new ArrayList<>();
 
-     Estudiante(java.lang.String Id, java.lang.String Name, java.lang.String fecha) {
-         super(Id, Name, fecha);
-     }
-
-     public java.lang.String getStudentId() {
-        return studentId;
+    public String getCarnet() {
+        return carnet;
     }
 
-    public void setStudentId(java.lang.String studentId) {
-        this.studentId = studentId;
+    public void setCarnet(String carnet) {
+        this.carnet = carnet;
     }
 
-    public java.lang.String getCarrera() {
-        return carrera;
+    public ArrayList<Carrera> getCarreras() {
+        return carreras;
     }
 
-    public void setCarrera(java.lang.String carrera) {
-        this.carrera = carrera;
+    public void setCarreras(ArrayList<Carrera> carreras) {
+        this.carreras = carreras;
     }
 
-
-     public String getCurso() {
-         return curso;
-     }
-
-     public void setCurso(String curso) {
-        this.curso = curso;
+    public ArrayList<Curso> getCursos() {
+        return cursos;
     }
 
+    public void setCursos(ArrayList<Curso> cursos) {
+        this.cursos = cursos;
+    }
 
+    public Estudiante(String identificacion, String nombre, String fechaNacimiento, String carnet, ArrayList<Carrera> carreras, ArrayList<Curso> cursos) {
+        super(identificacion, nombre, fechaNacimiento);
+        this.carnet = carnet;
+        this.carreras = carreras;
+        this.cursos = cursos;
+    }
 }
